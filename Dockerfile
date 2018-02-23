@@ -1,6 +1,6 @@
 FROM centos:7
 
-ENV TINI_VERSION=v0.14.0 CJOSE_URL=https://github.com/pingidentity/mod_auth_openidc/releases/download/v2.3.0/cjose-0.5.1-1.el7.centos.x86_64.rpm MOD_AUTH_OPENIDC_URL=https://github.com/pingidentity/mod_auth_openidc/releases/download/v2.3.3/mod_auth_openidc-2.3.3-1.el7.centos.x86_64.rpm
+ENV CJOSE_URL=https://github.com/pingidentity/mod_auth_openidc/releases/download/v2.3.0/cjose-0.5.1-1.el7.centos.x86_64.rpm MOD_AUTH_OPENIDC_URL=https://github.com/pingidentity/mod_auth_openidc/releases/download/v2.3.3/mod_auth_openidc-2.3.3-1.el7.centos.x86_64.rpm
 
 RUN set -x \
 	&& yum install -y epel-release \
