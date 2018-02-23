@@ -22,5 +22,7 @@ Sample with Google endpoints
     METADATA=https://accounts.google.com/.well-known/openid-configuration
     INTROSPECTION=https://www.googleapis.com/oauth2/v1/tokeninfo
 
+Place the environment variables in a file called `env`, and then the proxy can be run locally - 
 
+    docker run -it --rm -p 80:80 -p 443:443 --env-file ./env local/oauth-proxy
 

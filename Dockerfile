@@ -5,8 +5,7 @@ ENV CJOSE_URL=https://github.com/pingidentity/mod_auth_openidc/releases/download
 RUN set -x \
 	&& yum install -y epel-release \
 	&& yum update -y \
-    && yum install -y httpd mod_ssl \
-    && yum install -y jansson jansson-devel openssl-devel hiredis \
+    && yum install -y httpd mod_ssl jansson jansson-devel openssl-devel hiredis \
     && rpm -i  ${CJOSE_URL} \
     && rpm -i ${MOD_AUTH_OPENIDC_URL} \
     && yum -y clean all
