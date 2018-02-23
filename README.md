@@ -26,3 +26,5 @@ Place the environment variables in a file called `env`, and then the proxy can b
 
     docker run -it --rm -p 80:80 -p 443:443 --env-file ./env local/oauth-proxy
 
+## Sessions
+Currently sessions are stored on the filesystem in /tmp. This could be moved to Redis/Memcache or moved to a shared filesystem to allow multiple proxies to share sessions. Use of the client-cookie based sessions is not recommended. For more details see https://github.com/zmartzone/mod_auth_openidc/wiki/Caching.
